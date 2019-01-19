@@ -6,7 +6,10 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.wilddog.com/sdk/js/2.5.17/wilddog.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../public/js/template-web.js"></script>
+	<script src="../public/js/pandect.js"></script>
 	<style type="text/css">
 		.container{
 			width: 100%;
@@ -25,6 +28,26 @@
 			background: #fff;
 			color: #337ab7;
 
+		}
+		.lotPos{
+			position: absolute;
+			top: 50%;
+			left: 80px;
+			/*right: 5px;*/
+			transform: translateY(-50%);
+
+		}
+		.table>tbody>tr>td, .table>tbody>tr>th {
+			position: relative;
+			text-align: center;
+			vertical-align: middle;
+		}
+		.bgGray{
+			width: 100%;
+			/*background: #eee;*/
+			color: #fff ;
+			background: #000;
+			/*background: red;*/
 		}
 	</style>
 </head>
@@ -73,157 +96,78 @@
 		  <li><a href="#">PHP</a></li>
 		</ul>
 	</div>
+	<div class="page pull-right">
+	<ul class="pagination pagination-lg">
+    <li ><a href="javascript:;">&laquo;</a></li>
+    <li class="active pageBtn"><a href="javascript:;">1</a></li>
+    <li class="pageBtn"><a href="javascript:;">2</a></li>
+    <li class="pageBtn"><a href="javascript:;">3</a></li>
+    <li class="pageBtn"><a href="javascript:;">4</a></li>
+    <li class="pageBtn"><a href="javascript:;">5</a></li>
+    <li class="pageBtn"><a href="javascript:;">6</a></li>
+    <li class="pageBtn"><a href="javascript:;">7</a></li>
+    <li><a href="javascript:;">&raquo;</a></li>
+</ul>
+</div>
 		<div class="main">
 		<h2>一号大棚</h2>
 		<table class="table table-striped table-bordered">
 		  <thead>
 		    <tr>
-		      <th>地块编号</th>
-		      <th>农作物</th>
-		      <th>种植时间</th>
-		      <th>预计成熟时间</th>
-		      <th>种植时间</th>
-		      <th>操作</th>
+		      <th class="text-center">地块编号</th>
+		      <th class="text-center">农作物</th>
+		      <th class="text-center">种植时间</th>
+		      <th class="text-center">预计成熟时间</th>
+		      <th class="text-center">种植时间</th>
+		      <th class="text-center">预计剩余成熟时间</th>
+		      <th class="text-center">预计成熟日期</th>
+		      <th class="text-center" >操作</th>
 		    </tr>
 		  </thead>
-		  <tbody>
-		    <tr>
-		      <td>sd01_001</td>
-		      <td>上海青</td>
-		      <td>2019-1-16</td>
-		      <td>60天</td>
-		      <td>15天</td>
-		      <td>
-		      	<button class="btn btn-primary">导入历史</button>
-		      	<button class="btn btn-success">成功</button>
-		      	<button class="btn btn-danger">失败</button>
-		      		      </td>
-		    </tr>
+		  <tbody id="hourseInfo">
 		    
-		    <tr>
-		      <td>sd01_001</td>
-		      <td>上海青</td>
-		      <td>2019-1-16</td>
-		      <td>60天</td>
-		      <td>15天</td>
-		      <td>
-		      	<button class="btn btn-primary">导入历史</button>
-		      	<button class="btn btn-success">成功</button>
-		      	<button class="btn btn-danger">失败</button>
-		      		      </td>
-		    </tr>
-		    <tr>
-		      <td>sd01_001</td>
-		      <td>上海青</td>
-		      <td>2019-1-16</td>
-		      <td>60天</td>
-		      <td>15天</td>
-		      <td>
-		      	<button class="btn btn-primary">导入历史</button>
-		      	<button class="btn btn-success">成功</button>
-		      	<button class="btn btn-danger">失败</button>
-		      		      </td>
-		    </tr>
-		    <tr>
-		      <td>sd01_001</td>
-		      <td>上海青</td>
-		      <td>2019-1-16</td>
-		      <td>60天</td>
-		      <td>15天</td>
-		      <td>
-		      	<button class="btn btn-primary">导入历史</button>
-		      	<button class="btn btn-success">成功</button>
-		      	<button class="btn btn-danger">失败</button>
-		      		      </td>
-		    </tr>
-		    <tr>
-		      <td>sd01_001</td>
-		      <td>上海青</td>
-		      <td>2019-1-16</td>
-		      <td>60天</td>
-		      <td>15天</td>
-		      <td>
-		      	<button class="btn btn-primary">导入历史</button>
-		      	<button class="btn btn-success">成功</button>
-		      	<button class="btn btn-danger">失败</button>
-		      		      </td>
-		    </tr>
-		    <tr>
-		      <td>sd01_001</td>
-		      <td>上海青</td>
-		      <td>2019-1-16</td>
-		      <td>60天</td>
-		      <td>15天</td>
-		      <td>
-		      	<button class="btn btn-primary">导入历史</button>
-		      	<button class="btn btn-success">成功</button>
-		      	<button class="btn btn-danger">失败</button>
-		      		      </td>
-		    </tr>
-		    <tr>
-		      <td>sd01_001</td>
-		      <td>上海青</td>
-		      <td>2019-1-16</td>
-		      <td>60天</td>
-		      <td>15天</td>
-		      <td>
-		      	<button class="btn btn-primary">导入历史</button>
-		      	<button class="btn btn-success">成功</button>
-		      	<button class="btn btn-danger">失败</button>
-		      		      </td>
-		    </tr>
-		    <tr>
-		      <td>sd01_001</td>
-		      <td>上海青</td>
-		      <td>2019-1-16</td>
-		      <td>60天</td>
-		      <td>15天</td>
-		      <td>
-		      	<button class="btn btn-primary">导入历史</button>
-		      	<button class="btn btn-success">成功</button>
-		      	<button class="btn btn-danger">失败</button>
-		      		      </td>
-		    </tr>
-		    <tr>
-		      <td>sd01_001</td>
-		      <td>上海青</td>
-		      <td>2019-1-16</td>
-		      <td>60天</td>
-		      <td>15天</td>
-		      <td>
-		      	<button class="btn btn-primary">导入历史</button>
-		      	<button class="btn btn-success">成功</button>
-		      	<button class="btn btn-danger">失败</button>
-		      		      </td>
-		    </tr>
-		    <tr>
-		      <td>sd01_001</td>
-		      <td>上海青</td>
-		      <td>2019-1-16</td>
-		      <td>60天</td>
-		      <td>15天</td>
-		      <td>
-		      	<button class="btn btn-primary">导入历史</button>
-		      	<button class="btn btn-success">成功</button>
-		      	<button class="btn btn-danger">失败</button>
-		      		      </td>
-		    </tr>
-  </tbody>
+		   
+  		</tbody>
 </table>
-<div class="page pull-right">
-	<ul class="pagination pagination-lg">
-    <li ><a href="#">&laquo;</a></li>
-    <li class="active"><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li><a href="#">6</a></li>
-    <li><a href="#">7</a></li>
-    <li><a href="#">&raquo;</a></li>
-</ul>
+
 </div>
-</div>
-</div>
+
+<!-- hourseInfo -->
+<script type="text/html" id="hourseInfoTpl">
+	{{ each data }}
+	<div  class="bgGray text-center" data-id="{{ $index }}" >地块</div>
+	{{ each $value.vegs }}
+	{{ if $value.road != 1 && $value.height != '0'  }}
+	<tr>
+      <td>
+      {{ $value.masId }}
+  	</td>
+      <td>
+      {{ $value.name }}
+      </td>
+      <td>
+      {{ $value.sowDate }}
+      </td>
+      <td>
+      {{ $value.estimate }}天
+      </td>
+      <td>
+      {{ $value.passDay }} 天
+      </td>
+      <td>
+      {{ $value.upComingDay }} 天
+      </td>
+      <td>
+      {{ $value.metureDate }} 日
+      </td>
+      <td>
+      	<a class="btn btn-primary editor" href="javascript:;" data-id={{ $value.masId }} data-index= "{{$index}}">编辑</a>
+      	<a class="btn btn-success">编辑地块</a>
+	  </td>
+	 </tr>
+	 {{ /if }}
+	 {{ /each }}
+	 {{ /each }}
+</script>
 </body>
 </html>
