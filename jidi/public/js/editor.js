@@ -1,10 +1,13 @@
 $(function(){
+
 	var vegStr = location.href.split('?')[1].split('&')
 	// console.log(vegStr)
 	var houseId = vegStr[0].split( '=' )[1]
 	var vegId = vegStr[1].split( '=' )[1]
+	var originVegId = vegId
 	var vegIndex = vegStr[2].split( '=' )[1]
-
+	var editorInfo = null
+	console.log(vegId)
 	/**
 	*初始化野狗数据库节点
 	**/
@@ -23,10 +26,6 @@ $(function(){
 	   var  detailData =null
 	   if (vegId.indexOf('F')>=0){
 	   	 vegId = parseInt(vegId.substring(vegId.length-2, vegId.length)) >= 10 ? parseInt(vegId.substring(vegId.length-2, vegId.length))-1 : parseInt(vegId.substring(vegId.length-1, vegId.length))-1
-	   	 // console.log(snapshot.val())
-	   	 // console.log(houseId)
-	   	 // console.log(vegId)
-	   	 // console.log(vegIndex)
 	   	 var keyNum=0
 	   	 for (var key in snapshot.val()[houseId]['firstLine'][vegId].vegs){
 	   	 	// console.log(snapshot.val()[houseId]['firstLine'][vegId].vegs[key])
@@ -37,9 +36,9 @@ $(function(){
 	   	 	}
 	   	 	keyNum ++ 
 	   	 }
-	   	 // vegData = snapshot.val()[houseId]['firstLine'][vegId].vegs[vegIndex]
+	   	 
 	   }else{
-	   vegId = parseInt(vegId.substring(vegId.length-2, vegId.length)) >= 10 ? parseInt(vegId.substring(vegId.length-2, vegId.length))-1 : parseInt(vegId.substring(vegId.length-1, vegId.length))-1
+	 	 vegId = parseInt(vegId.substring(vegId.length-2, vegId.length)) >= 10 ? parseInt(vegId.substring(vegId.length-2, vegId.length))-1 : parseInt(vegId.substring(vegId.length-1, vegId.length))-1  	
 	     var keyNum=0
 	   	 for (var key in snapshot.val()[houseId]['secondLine'][vegId].vegs){
 	   	 	// console.log(snapshot.val()[houseId]['firstLine'][vegId].vegs[key])
@@ -50,9 +49,8 @@ $(function(){
 	   	 	}
 	   	 	keyNum ++ 
 	   	 }
-	     
+	     console.log(vegData)
 	   }
-	   console.log(vegData)
 	   var timeStr = 1000*60*60*24
 	   var dateDis = new Date() - new Date(vegData.sowDate)
 	   vegData.passDay = parseInt(dateDis/timeStr)
@@ -68,11 +66,57 @@ $(function(){
 	    $('#vegDetail').html(detailHtmlStr)
 
 	   // console.log(detailHtmlStr)
+	  
+	  $('.close').on('click', function(){
+	  		$('.hideAlert').hide(300)
+	  })
+	   $('#save').on('click', function(){
+
+	   	 editorInfo = {
+	   		masId : $.trim($('[name="productId"]').val()),
+	   		name : $.trim($('[name="name"]').val()),
+	   		sowDate : $.trim($('[name="plantPro"]').val()),
+	   		estimate : $.trim($('[name="estimateDay"]').val())
+	   }
+
+	   if(editorInfo.name == '' || editorInfo.sowDate=='' || editorInfo.estimate=='' ){
+	   	$('.hideAlert').show(300)
+	   	 return;
+	   }
+	
+	    if (editorInfo.masId.indexOf('F')>=0){
+		wilddog.sync().ref(`/${houseId}/firstLine/${vegId}/vegs/${vegIndex}`).update({
+			name: editorInfo.name,
+			masId: editorInfo.masId,
+			estimate: editorInfo.estimate,
+			sowDate: editorInfo.sowDate
+		})	
+	    .then(function(){
+	    	location.href = './pandect.html?id=' + houseId
+	    })
+	    .catch(function(err){
+	        alert('添加失败')
+	    })
+	   }else{
+	    wilddog.sync().ref(`/${houseId}/secondLine/${vegId}/vegs/${vegIndex}`).update({
+			name: editorInfo.name,
+			masId: editorInfo.masId,
+			estimate: editorInfo.estimate,
+			sowDate: editorInfo.sowDate
+		})	
+	    .then(function(){
+	    	location.href = './pandect.html?id=' + houseId
+	    })
+	    .catch(function(err){
+	        alert('添加失败')
+	    })
+	   }
+	 
+	   })
+		
 	})
 
-	$('#vegDetail').on('click', '#save',  function(){
-		history.back()
-	})
+
 })
 
 function getMatureDate(originDate, addDays){

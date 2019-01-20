@@ -7,7 +7,7 @@ $(function(){
 	*初始化野狗数据库节点
 	**/
 	var config = {
-		  syncURL: "https://wd0963251028wmtevt.wilddogio.com/vegData" //输入节点 URL
+		  syncURL: "https://wd2274323339wrjwcl.wilddogio.com/vegData" //输入节点 URL
 		}
 		wilddog.initializeApp(config)
 		var ref = wilddog.sync().ref()
@@ -17,7 +17,10 @@ $(function(){
 	ref.on("value", function(snapshot) {
 	    console.log(snapshot.val())
 	    vegsData = snapshot.val() //获取野狗数据库数据
+	  
 	    var fistLineData = snapshot.val()[mapId].firstLine
+	    // json对象转换成数组对象
+	    jsonToArr(fistLineData)
 	    var fistHtmlStr = template('firstLineTpl', {
 	    	data : fistLineData
 	    })
@@ -32,6 +35,7 @@ $(function(){
 	    $('#roadLine').html(roadHtmlStr)
 
 	    var secondLineData = snapshot.val()[mapId].secondLine
+	  	jsonToArr(secondLineData)
 	    var secondHtmlStr = template('secondLineTpl', {
 	    	data : secondLineData
 	    })
@@ -40,12 +44,28 @@ $(function(){
 	})
 
 	/*
-	*给每个蔬菜所在的“a”标签，绑定点击事件
+	*给每个蔬菜所在的“a”标签，绑定点击事件，跳转到详情页面
 	*/
 	$('.map').on('click', 'a', function(){
-		var vegId = $(this).parent('div').attr('data-id')
+		var vegId = $(this).parent('div').parent('div').attr('data-id')
 		var vegIndex = $(this).attr('data-index')
 		var vegStr ='id=' + mapId +'&'+ 'vegId=' + vegId + '&' + 'vegIndex=' + vegIndex
 		$(this).attr('href','./detail.html?' + vegStr )
 	})
 })
+
+
+/**
+ * jsonToArr
+ * @param  {Object} ) arrData 转换成数组的json对象
+ */
+function jsonToArr(arrData){
+  var tmpArr= []
+   arrData.forEach(function(item){	
+    	for(var key in item.vegs){
+    		tmpArr.push(item.vegs[key])
+    	}
+    	item.vegs = tmpArr
+    	tmpArr= []
+	  })
+}

@@ -42,3 +42,44 @@
 		  <li><a href="#">PHP</a></li>
 		</ul>
 	</div>
+
+
+	{{ each data }}
+	<div  class="bgGray text-center" data-id="{{ $index }}" >地块</div>
+	{{ each $value.vegs }}
+	{{ if $value.road != 1 && $value.height != '0'  }}
+	<tr>
+      <td>
+      {{ $value.masId }}
+  	</td>
+      <td>
+      {{ $value.name }}
+      </td>
+      <td>
+      {{ $value.sowDate }}
+      </td>
+      <td>
+      {{ $value.estimate }}天
+      </td>
+      <td>
+      {{ $value.passDay }} 天
+      </td>
+      <td>
+      {{ $value.upComingDay }} 天
+      </td>
+      <td>
+      {{ $value.metureDate }} 日
+      </td>
+      <td>
+      	<a class="btn btn-primary editor" href="javascript:;" data-id="{{ $value.masId }}" data-index= "{{$index}}">编辑</a>
+      	
+      	<a class="btn btn-danger delete" data-id="{{ $value.masId }}" data-test="{{ data[2]['vegs']['length']}}"   data-index= "{{$index}}" >删除
+      	</a>
+
+      
+      	<a class="btn btn-success increase" data-id="{{ $value.masId }}"  data-index= "{{$index}}">添加</a>
+	  </td>
+	 </tr>
+	 {{ /if }}
+	 {{ /each }}
+	 {{ /each }}

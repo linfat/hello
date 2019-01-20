@@ -58,20 +58,34 @@
 			font-size: 20px;
 		}
 		.detail{
-			display: block;
+			display: inline-block;
 			width: 100%;
-			height: 50%;
 			font-size: 16px;
 			text-align: center;
 			padding-top: 30px;
+
 			
 			
 		}
 		#firstLine{
-			transform:rotateX(-180deg)
+			transform:rotateX(-180deg);
+			position: relative;
 		}
 		#firstLine a{
-			transform:rotateX(-180deg)
+			transform:rotateX(-180deg);
+		}
+		.second-line{
+			position: relative;
+		}
+		#firstLine .abox, .second-line .abox{
+			/*width: 100px;*/
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.emptyBg{
+			color: #b31616;
+			font-size: 20px;
 		}
 	</style>
 </head>
@@ -111,7 +125,7 @@
 				        </li>
 				    </ul>	
 		  </li>
-		  <li><a href="./views/pandect.html">农作物总览</a></li>
+		  <li><a href="./pandect.html">农作物总览</a></li>
 		  <li><a href="./history.html">历史记录</a></li>
 		  <li><a href="#">VB.Net</a></li>
 		  <li><a href="#">Java</a></li>
@@ -165,17 +179,20 @@
 	{{each data}}
 
 	
-	<div class="first-line" data-id="{{ $index }}" style="width: {{ $value.width }}; height: {{ $value.height }}">
+	<div class="first-line" data-id="{{ $value.masId }}" style="width: {{ $value.width }}; height: {{ $value.height }}">
 		{{if $value.height != '0px' && $value.road == '0'  }}
-
+		<div class="abox" style="width: {{ $value.width }};">
 		{{each $value.vegs}}
 		
 			<a href="./detail.html?id=1" data-index="{{ $index }}" class="detail">
-				<span>{{ $value.name }}</span>
+				<span class="{{ $value.name == '空地' ? 'emptyBg' : ''  }}">{{ $value.name }}</span>
+				{{if $value.name != '空地'}}
 				<p>种植日期：{{ $value.sowDate }}</p>
+				{{ /if }}
 			</a>
 			
 		{{/each}}
+		</div>
 		{{/if}}		
 		</div>
 		
@@ -194,14 +211,18 @@
 <script type="text/html" id="secondLineTpl">
 
 	{{each data}}
-	<div class="second-line {{ $value.road === '1' ? 'road' : '' }}" data-id="{{ $index }}" style="width: {{ $value.width }}; height: {{ $value.height }}">
+	<div class="second-line {{ $value.road === '1' ? 'road' : '' }}" data-id="{{ $value.masId }}" style="width: {{ $value.width }}; height: {{ $value.height }}">
 		{{if $value.height != '0px' && $value.road == '0' }}
+		<div class="abox" style="width: {{ $value.width }};">
 		{{each $value.vegs}}
 			<a href="javascript:;" data-index="{{ $index }}"  class="detail">
-				<span>{{ $value.name }}</span>
+				<span class="{{ $value.name == '空地' ? 'emptyBg' : ''  }}">{{ $value.name }}</span>
+				{{if $value.name != '空地'}}
 				<p>种植日期：{{ $value.sowDate }}</p>
+				{{ /if }}
 			</a>
 		{{/each}}
+		</div>
 		{{/if}}	
 		</div>
 	{{/each}}	
