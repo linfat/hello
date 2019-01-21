@@ -24,20 +24,16 @@ $(function(){
 					// 	console.log(item)
 					// })
 					// console.log(item)
-					for(var key0 in item ){
-
-						for(var key1 in item.vegs){
-							// console.log(key)
-							for( var key2 in item.vegs[key1]){
-								// console.log(item.vegs[key1][key])
-								if(key2 == 'name'){
+					for(var key0 in item.vegs ){
+						// console.log(item.vegs[key0])
+						for(var key1 in item.vegs[key0]){
+								if(key1 == 'name'){
 									var obj = {}
-									obj.topName = item.vegs[key1][key2]
-									obj.newvegs = item.vegs[key1]
-									// console.log(item.vegs[key1][key2])
-									newVegsArr.push(obj)
+									obj.topName = item.vegs[key0][key1]
+									obj.newvegs = item.vegs[key0]
+									newVegsArr.push(obj)						
+									break
 								}
-							}
 						
 						}
 					}
@@ -49,10 +45,7 @@ $(function(){
 			var oBjNum = -1
 			var allVegsObj={}
 			newVegsArr.forEach(function(item0, index){
-				// console.log(item0)
-				var name = item0.topName
-				// console.log(name)
-			
+				var name = item0.topName	
 				if(onlyKey.indexOf(name)== -1 && name != ""){
 					onlyKey.push(name)
 					oBjNum++
@@ -62,20 +55,14 @@ $(function(){
 
 				}else{
 					for(var key in allVegsObj){
-						// console.log(item0.topName)
-						// console.log(allVegsObj[key][0]['topName'])
 						if(item0.topName == allVegsObj[key][0]['topName']){
 							allVegsObj[key].push(item0)
+							break
 						}
 					}
 				}
-				// newAllvegObj[0].push= item0
-				// console.log(newAllvegObj['0'])
 
 			})
-			// console.log(onlyKey)
-			console.log(allVegsObj)
-			// console.log(newAllvegObj)
 			var allVegsObjArr = []
 			for(var key in allVegsObj){
 				allVegsObjArr.push(allVegsObj[key])
@@ -85,27 +72,101 @@ $(function(){
 			})
 			$('#analysisBox').html(htmlStr)
 
-// allVegsObjArr[0]
 			var htmlDetailStr = template('detailBoxTpl', {
 				data : null
 			})
 			$('#detailBox').html(htmlDetailStr)
 
+			
+			allVegsObjArr.forEach(function(item0, index){
+				// console.log(item)
+				item0.forEach(function(item1, index){
+					item1.newvegs.matureDay = getMatureDate(item1.newvegs.sowDate, item1.newvegs.estimate)
+					// item1.newvegs.remainDay = getMatureDate(new Date(), item1.newvegs.sowDateitem1.newvegs.estimate)
+					item1.newvegs.passDay =parseInt((new Date() - new Date(item1.newvegs.sowDate))/ (1000*60*60*24)) 
+					item1.newvegs.remainDay = parseInt((new Date(item1.newvegs.matureDay) - new Date())/ (1000*60*60*24)) 
+					// item0.newvegs.sowDate
+				})
+			
+			})
+			console.log(allVegsObjArr)
+			/**
+			 * 按照大棚查看详情
+			 */
+			var  topAllVegsArr = []
+			allVegsObjArr.forEach(function(item, index){
+				if(index == 0){
+					topAllVegsArr = item.slice(0)
+				}else{
+				
+					topAllVegsArr = topAllVegsArr.concat(item.slice(0))
+				}
+				
+			})
+		
 			$('#analysisBox').on('click','.detail', function(){
-				 var index = $(this).attr('data-id')
-				 console.log(index)
+				var data = null
+				if($(this).attr('data-link') != 'top'){
+					 var index = $(this).attr('data-id')
+					  data =allVegsObjArr[index]
+				}
+			   data =topAllVegsArr
 				 $('#analysisBox').html(htmlStr)
 				var htmlDetailStr = template('detailBoxTpl', {
-					data : allVegsObjArr[index]
+					data : data
 				})
 				$('#detailBox').html(htmlDetailStr)
 			})
-			// console.log(allVegsObjArr)
+			/*
+		按照时间升序查看详情
+		 */
+		$('#analysisBox').on('click','.orderByUp', function(){
+			if($(this).attr('data-link') != 'top'){
+					 var index = $(this).attr('data-id')
+					  data =allVegsObjArr[index]
+				}
+			   data =topAllVegsArr
+			 
+			 var orderByUpVegsData = data.sort(function(obj1, obj2){
+				  return obj1.newvegs.remainDay - obj2.newvegs.remainDay
+			})
+			 var htmlDetailStr = template('detailBoxTpl', {
+					data : data
+				})
+				$('#detailBox').html(htmlDetailStr)
+		})
+			/*
+		按照时间降序查看详情
+		 */
+		$('#analysisBox').on('click','.orderByDown', function(){
+			if($(this).attr('data-link') != 'top'){
+					 var index = $(this).attr('data-id')
+					  data =allVegsObjArr[index]
+				}
+			   data =topAllVegsArr
+			 
+			 var orderByUpVegsData = data.sort(function(obj1, obj2){
+				  return obj2.newvegs.remainDay - obj1.newvegs.remainDay 
+			})
+			 var htmlDetailStr = template('detailBoxTpl', {
+					data : data
+				})
+				$('#detailBox').html(htmlDetailStr)
 		})
 
-		{
-			name:111
-			arr:[]
 
-		}
+		})
+
+
+		
+		
 })
+
+
+function getMatureDate(originDate, addDays){
+   var timeStr = 1000*60*60*24
+   var matureDateStr = new Date(originDate).getTime() + addDays * timeStr 
+   var originDate = new Date(matureDateStr)
+   var matureDate = originDate.getFullYear() + '-' + parseInt(originDate.getMonth()+ 1) + '-' + originDate.getDate() 
+	   return matureDate
+}
