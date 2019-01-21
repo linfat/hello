@@ -109,8 +109,10 @@ $(function(){
 				if($(this).attr('data-link') != 'top'){
 					 var index = $(this).attr('data-id')
 					  data =allVegsObjArr[index]
+				}else{
+ 					data =topAllVegsArr
 				}
-			   data =topAllVegsArr
+			  
 				 $('#analysisBox').html(htmlStr)
 				var htmlDetailStr = template('detailBoxTpl', {
 					data : data
@@ -121,11 +123,13 @@ $(function(){
 		按照时间升序查看详情
 		 */
 		$('#analysisBox').on('click','.orderByUp', function(){
+			var data = null
 			if($(this).attr('data-link') != 'top'){
 					 var index = $(this).attr('data-id')
 					  data =allVegsObjArr[index]
+				}else{
+ 					data =topAllVegsArr
 				}
-			   data =topAllVegsArr
 			 
 			 var orderByUpVegsData = data.sort(function(obj1, obj2){
 				  return obj1.newvegs.remainDay - obj2.newvegs.remainDay
@@ -139,11 +143,13 @@ $(function(){
 		按照时间降序查看详情
 		 */
 		$('#analysisBox').on('click','.orderByDown', function(){
+			var data = null
 			if($(this).attr('data-link') != 'top'){
 					 var index = $(this).attr('data-id')
 					  data =allVegsObjArr[index]
+				}else{
+ 					data =topAllVegsArr
 				}
-			   data =topAllVegsArr
 			 
 			 var orderByUpVegsData = data.sort(function(obj1, obj2){
 				  return obj2.newvegs.remainDay - obj1.newvegs.remainDay 
