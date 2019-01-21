@@ -9,14 +9,14 @@
 	<script src="https://cdn.wilddog.com/sdk/js/2.5.17/wilddog.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="../public/js/template-web.js"></script>
-	<script src="../public/js/editor.js"></script>
+	<script src="../public/js/analysis.js"></script>
 	<style type="text/css">
 		.container{
 			width: 100%;
 			padding-top: 15px;
 			padding: 15px;
 		}
-
+		
 		.btn-default{
 			border:none;
 			color: #337ab7;
@@ -30,24 +30,17 @@
 			color: #337ab7;
 
 		}
-		.pro_title{
-			margin-left: 200px;
-			text-shadow: 8px 1px 4px #ccc;
+		.main{
+			margin-top: 30px;
+			padding: 0px 20px;
 		}
-		.hideAlert{
-			display: none;
-			width: 600px;
-			margin-left: 120px;
-		}
-	/*	..form-horizontal .control-label{
-			text-align: left;
-		}*/
 	</style>
 </head>
 <body>
 	<div class="container">
+<!-- 	//头部导航栏 -->
 	<div class="header">
-				<ul class="nav nav-pills nav-justified">
+		<ul class="nav nav-pills nav-justified">
 		  <li class="active"><a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span>基地大棚列表</a>
 				   <ul class="dropdown-menu">
 				        <li>
@@ -89,61 +82,72 @@
 		  <li><a href="#">PHP</a></li>
 		</ul>
 	</div>
-	<!-- 表单 -->
-<div class="main">
+	<div class="main">	
+	<table class="table table-striped table-bordered">
+	  <thead>
+	    <tr>
+	      <th class="text-center">ID</th>
+	      <th class="text-center">农作物</th>
+	      <th class="text-center">种植地块总数</th>
+	      <th class="text-center">操作</th>  
+	    </tr>
+	  </thead>
+	  <tbody id="analysisBox">
+	    <tr>
+	      <td>Tanmay</td>
+	      <td>Bangalore</td>
+	      <td>560001</td>
+	      <td>560001</td>
+	      
+	    </tr>
+	   
+	  </tbody>
+	</table>
 
-<h2 class="pro_title"></h2>
-
-   <div class="alert alert-danger alert-dismissible hideAlert" >
-  <button type="button" class="close" ><span aria-hidden="true">&times;</span>
-  </button>
-  <strong>Warning!</strong> 其中有一项必填项未填写
-</div>
-<form class="form-horizontal " id="vegDetail">
- 	
-  
-</form>
-</div>
-</div>
-
-<!-- vegDetail -->
-<script type="text/html" id="vegDetailTpl">
-	<div class="form-group " >
-    <label for="productId" class="col-sm-2 control-label">编 号：</label>
-    <div class="col-sm-6">
-      <input value="{{ data.masId }}" name="productId" type="text"  class="form-control" id="productId" placeholder="请输入农作物ID" disabled="">
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="name" class="col-sm-2 control-label">农 作 物：</label>
-    <div class="col-sm-6">
-      <input required="" value="{{ data.name }}" name="name" type="text" class="form-control" id="name" placeholder="请输入农作物名字">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="plantPro" class="col-sm-2 control-label">种植日期：</label>
-    <div class="col-sm-6">
-      <input required=""  value="{{ data.sowDate }}" name="plantPro" type="date" class="form-control" id="plantPro" placeholder="请输入种植日期">
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="estimateDay" class="col-sm-2 control-label">预计成熟天数：</label>
-    <div class="col-sm-6">
-      <input required=""  value="{{  data.estimate }}" name="estimateDay" type="text" class="form-control" id="estimateDay" placeholder="请输入预计成熟日期">
-    </div>
-  </div>
-
-
-  <div class="form-group">
-  	 <label for="" class="col-sm-2 control-label"></label>
-    <div class="col-sm-6">
-     <a class="btn btn-success" id="save" >保存</a>	
-    </div>
-
-  </div>
-
-</script>
+<!-- 详情页面 -->
+		<table class="table table-striped table-bordered">
+	  <thead>
+	    <tr>
+	      <th class="text-center">地块编号</th>
+	      <th class="text-center">农作物</th>
+	      <th class="text-center">种植时间</th>
+	      <th class="text-center">成熟时间</th>  
+	    </tr>
+	  </thead>
+	  <tbody id="detailBox">
+	    <tr>
+	      <td>Tanmay</td>
+	      <td>Bangalore</td>
+	      <td>560001</td>
+	      <td>560001</td>
+	      
+	    </tr>
+	   
+	  </tbody>
+	</table>
+ </div>
+	</div>
+<!-- analysisBox -->
+<script type="text/html" id="analysisBoxTpl">
+	{{ each data }}
+ 		<tr>
+	      <td>{{ $index +1 }}</td>
+	      <td>{{$value[0].topName}}</td>
+	      <td>{{ $value.length }}</td>
+	      <td><button class="btn btn-primary">查看详情</button></td>
+	    </tr>
+	 {{ /each }}  
+ </script>
+ <!-- detailBox -->
+ <script type="text/html" id="detailBoxTpl">
+	{{ each data }}
+ 		<tr>
+	      <td>{{$value.newvegs.masId}}</td>
+	      <td>{{ $value.topName }}</td>
+	      <td>11</td>
+	      <td><button class="btn btn-primary">查看详情</button></td>
+	    </tr>
+	 {{ /each }}  
+ </script>
 </body>
 </html>
