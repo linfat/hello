@@ -134,7 +134,7 @@
 	      <td>{{ $index +1 }}</td>
 	      <td>{{$value[0].topName}}</td>
 	      <td>{{ $value.length }}</td>
-	      <td><button class="btn btn-primary">查看详情</button></td>
+	      <td><button class="btn btn-primary detail" data-id="{{$index}}">查看详情</button></td>
 	    </tr>
 	 {{ /each }}  
  </script>
@@ -145,7 +145,7 @@
 	      <td>{{$value.newvegs.masId}}</td>
 	      <td>{{ $value.topName }}</td>
 	      <td>11</td>
-	      <td><button class="btn btn-primary">查看详情</button></td>
+	      <td><button class="btn btn-primary" class="detail">查看详情</button></td>
 	    </tr>
 	 {{ /each }}  
  </script>

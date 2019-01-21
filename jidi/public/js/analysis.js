@@ -85,14 +85,22 @@ $(function(){
 			})
 			$('#analysisBox').html(htmlStr)
 
-
+// allVegsObjArr[0]
 			var htmlDetailStr = template('detailBoxTpl', {
-				data : allVegsObjArr[0]
+				data : null
 			})
 			$('#detailBox').html(htmlDetailStr)
 
-
-			console.log(allVegsObjArr)
+			$('#analysisBox').on('click','.detail', function(){
+				 var index = $(this).attr('data-id')
+				 console.log(index)
+				 $('#analysisBox').html(htmlStr)
+				var htmlDetailStr = template('detailBoxTpl', {
+					data : allVegsObjArr[index]
+				})
+				$('#detailBox').html(htmlDetailStr)
+			})
+			// console.log(allVegsObjArr)
 		})
 
 		{
