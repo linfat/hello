@@ -132,6 +132,8 @@ $(function(){
 		// alert(1)
 	})
 
+
+
 /**
  * 
  将地块编号传入编辑页面
@@ -319,12 +321,6 @@ function renderData(snapshot, horseId){
 	    	data : vegsData
 	    })
 	    $('#hourseInfo').html(horsesHtmlStr)
-
-	    // var roadLineData = snapshot.val()[mapId].roadLine
-	    // var roadHtmlStr = template('roadLineTpl', {
-	    // 	data : roadLineData
-	    // })}
-
 
 
 }

@@ -63,6 +63,13 @@ $(function(){
 	    	data : vegData
 	    })
 
+	    console.log(vegData)
+	    var originInfo ={
+	    	masId : vegData.masId,
+	    	name : vegData.name,
+	    	sowDate : vegData.sowDate
+
+	    }
 	    $('#vegDetail').html(detailHtmlStr)
 
 	   // console.log(detailHtmlStr)
@@ -92,6 +99,19 @@ $(function(){
 			sowDate: editorInfo.sowDate
 		})	
 	    .then(function(){
+	    	 var hisBool = confirm('你需要把之前的数据添加到历史记录吗？')
+	    	 if(hisBool){
+	    	 	$.ajax({
+	    	 		url: '../views/ediHistory.html',
+	    	 		type: 'get',
+	    	 		data: originInfo,
+	    	 		success: function(err){
+	    	 			console.log(err)
+	    	 		}
+	    	 	})
+	    	 	
+	    	 	
+	    	 }
 	    	location.href = './pandect.html?id=' + houseId
 	    })
 	    .catch(function(err){
