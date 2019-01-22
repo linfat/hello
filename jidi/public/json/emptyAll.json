@@ -1,0 +1,2328 @@
+{
+  "vegData": {
+    "1": {
+      "firstLine": {
+        "0": {
+          "height": "250px",
+          "masId": "sd01F01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01F01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "250px",
+          "masId": "sd01F02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01F02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd01F03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01F03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd01F04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01F04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd01F05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01F05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "250px",
+          "masId": "sd01F06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01F06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      },
+      "roadLine": {
+        "height": "100px",
+        "width": "600px"
+      },
+      "secondLine": {
+        "0": {
+          "height": "250px",
+          "masId": "sd01S01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01S01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "33px"
+        },
+        "1": {
+          "height": "250px",
+          "masId": "sd01S02",
+          "road": "1",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01S02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "33px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd01S03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01S03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "34px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd01S04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01S04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd01S05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01S05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "250px",
+          "masId": "sd01S06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01S06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "250px",
+          "masId": "sd01S07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01S07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd01S08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd01S08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      }
+    },
+    "2": {
+      "firstLine": {
+        "0": {
+          "height": "250px",
+          "masId": "sd02F01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "250px",
+          "masId": "sd02F02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "10": {
+          "height": "250px",
+          "masId": "sd02F11",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F11",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "11": {
+          "height": "250px",
+          "masId": "sd02F12",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F12",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "12": {
+          "height": "250px",
+          "masId": "sd02F13",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F13",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd02F03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd02F04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd02F05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "250px",
+          "masId": "sd02F06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "250px",
+          "masId": "sd02F07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd02F08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "8": {
+          "height": "250px",
+          "masId": "sd02F09",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F09",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "9": {
+          "height": "250px",
+          "masId": "sd02F10",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02F10",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      },
+      "roadLine": {
+        "height": "100px",
+        "width": "1300px"
+      },
+      "secondLine": {
+        "0": {
+          "height": "80px",
+          "masId": "sd02S01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "80px",
+          "masId": "sd02S02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "10": {
+          "height": "250px",
+          "masId": "sd02S11",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S11",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "11": {
+          "height": "250px",
+          "masId": "sd02S12",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S12",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "12": {
+          "height": "250px",
+          "masId": "sd02S13",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S13",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "80px",
+          "masId": "sd02S03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd02S04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd02S05",
+          "road": "1",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "250px",
+          "masId": "sd02S06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "250px",
+          "masId": "sd02S07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd02S08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "8": {
+          "height": "250px",
+          "masId": "sd02S09",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S09",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "9": {
+          "height": "250px",
+          "masId": "sd02S10",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd02S10",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      }
+    },
+    "3": {
+      "firstLine": {
+        "0": {
+          "height": "250px",
+          "masId": "sd03F01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "250px",
+          "masId": "sd03F02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "10": {
+          "height": "250px",
+          "masId": "sd03F11",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F11",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd03F03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd03F04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd03F05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "250px",
+          "masId": "sd03F06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "250px",
+          "masId": "sd03F07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd03F08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "8": {
+          "height": "250px",
+          "masId": "sd03F09",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F09",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "9": {
+          "height": "250px",
+          "masId": "sd03F10",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03F10",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      },
+      "roadLine": {
+        "height": "100px",
+        "width": "1100px"
+      },
+      "secondLine": {
+        "0": {
+          "height": "250px",
+          "masId": "sd03S01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "250px",
+          "masId": "sd03S02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "10": {
+          "height": "350px",
+          "masId": "sd03S11",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S11",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd03S03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd03S04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd03S05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "250px",
+          "masId": "sd03S06",
+          "road": "1",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "250px",
+          "masId": "sd03S07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd03S08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "8": {
+          "height": "250px",
+          "masId": "sd03S09",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S09",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "9": {
+          "height": "300px",
+          "masId": "sd03S10",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd03S10",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      }
+    },
+    "4": {
+      "firstLine": {
+        "0": {
+          "height": "250px",
+          "masId": "sd04F01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "250px",
+          "masId": "sd04F02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "10": {
+          "height": "190px",
+          "masId": "sd04F11",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F11",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "11": {
+          "height": "220px",
+          "masId": "sd04F12",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F12",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "12": {
+          "height": "250px",
+          "masId": "sd04F13",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F13",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "13": {
+          "height": "280px",
+          "masId": "sd04F14",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F14",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "14": {
+          "height": "310px",
+          "masId": "sd04F15",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F15",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "15": {
+          "height": "340px",
+          "masId": "sd04F16",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F16",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd04F03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd04F04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "0px",
+          "masId": "sd04F05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "0px",
+          "masId": "sd04F06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "0px",
+          "masId": "sd04F07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "100px",
+          "masId": "sd04F08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "8": {
+          "height": "130px",
+          "masId": "sd04F09",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F09",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "9": {
+          "height": "160px",
+          "masId": "sd04F10",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04F10",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      },
+      "roadLine": {
+        "height": "100px",
+        "width": "1600px"
+      },
+      "secondLine": {
+        "0": {
+          "height": "250px",
+          "masId": "sd04S01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "250px",
+          "masId": "sd04S02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "10": {
+          "height": "350px",
+          "masId": "sd04S11",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S11",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "11": {
+          "height": "250px",
+          "masId": "sd04S12",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S12",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "12": {
+          "height": "250px",
+          "masId": "sd04S13",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S13",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "13": {
+          "height": "250px",
+          "masId": "sd04S14",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S14",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "14": {
+          "height": "100px",
+          "masId": "sd04S15",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S15",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "15": {
+          "height": "50px",
+          "masId": "sd04S16",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S16",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd04S03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd04S04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd04S05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "250px",
+          "masId": "sd04S06",
+          "road": "1",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "250px",
+          "masId": "sd04S07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd04S08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "8": {
+          "height": "250px",
+          "masId": "sd04S09",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S09",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "9": {
+          "height": "300px",
+          "masId": "sd04S10",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd04S10",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      }
+    },
+    "5": {
+      "firstLine": {
+        "0": {
+          "height": "200px",
+          "masId": "sd05F01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05F01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "200px",
+          "masId": "sd05F02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05F02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd05F03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05F03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd05F04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05F04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd05F05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05F05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "200px",
+          "masId": "sd05F06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05F06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "150px",
+          "masId": "sd05F07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05F07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "100px",
+          "masId": "sd05F08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05F08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "8": {
+          "height": "50px",
+          "masId": "sd05F09",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05F09",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      },
+      "roadLine": {
+        "height": "100px",
+        "width": "1200px"
+      },
+      "secondLine": {
+        "0": {
+          "height": "250px",
+          "masId": "sd05S01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "250px",
+          "masId": "sd05S02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "10": {
+          "height": "160px",
+          "masId": "sd05S11",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S11",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "11": {
+          "height": "80px",
+          "masId": "sd05S12",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S12",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd05S03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd05S04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd05S05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "250px",
+          "masId": "sd05S06",
+          "road": "1",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "250px",
+          "masId": "sd05S07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd05S08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "8": {
+          "height": "250px",
+          "masId": "sd05S09",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S09",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "9": {
+          "height": "250px",
+          "masId": "sd05S10",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd05S10",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      }
+    },
+    "6": {
+      "firstLine": {
+        "0": {
+          "height": "250px",
+          "masId": "sd06F01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06F01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "250px",
+          "masId": "sd06F02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06F02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd06F03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06F03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd06F04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06F04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd06F05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06F05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "250px",
+          "masId": "sd06F06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06F06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "250px",
+          "masId": "sd06F07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06F07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd06F08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06F08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      },
+      "roadLine": {
+        "height": "100px",
+        "width": "800px"
+      },
+      "secondLine": {
+        "0": {
+          "height": "250px",
+          "masId": "sd06S01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06S01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "250px",
+          "masId": "sd06S02",
+          "road": "1",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06S02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "250px",
+          "masId": "sd06S03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06S03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd06S04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06S04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd06S05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06S05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "250px",
+          "masId": "sd06S06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06S06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "250px",
+          "masId": "sd06S07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06S07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd06S08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd06S08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      }
+    },
+    "7": {
+      "firstLine": {
+        "0": {
+          "height": "0px",
+          "masId": "sd07F01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "0px",
+          "masId": "sd07F02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "10": {
+          "height": "300px",
+          "masId": "sd07F11",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F11",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "11": {
+          "height": "300px",
+          "masId": "sd07F12",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F12",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "12": {
+          "height": "300px",
+          "masId": "sd07F13",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F13",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "13": {
+          "height": "300px",
+          "masId": "sd07F14",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F14",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "14": {
+          "height": "300px",
+          "masId": "sd07F15",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F15",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "0px",
+          "masId": "sd07F03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "0px",
+          "masId": "sd07F04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "0px",
+          "masId": "sd07F05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "0px",
+          "masId": "sd07F06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "200px",
+          "masId": "sd07F07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd07F08",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "8": {
+          "height": "250px",
+          "masId": "sd07F09",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F09",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "9": {
+          "height": "250px",
+          "masId": "sd07F10",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07F10",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      },
+      "roadLine": {
+        "height": "100px",
+        "width": "1500px"
+      },
+      "secondLine": {
+        "0": {
+          "height": "150px",
+          "masId": "sd07S01",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S01",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "1": {
+          "height": "150px",
+          "masId": "sd07S02",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S02",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "10": {
+          "height": "250px",
+          "masId": "sd07S11",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S11",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "11": {
+          "height": "250px",
+          "masId": "sd07S12",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S12",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "12": {
+          "height": "250px",
+          "masId": "sd07S13",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S13",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "13": {
+          "height": "250px",
+          "masId": "sd07S14",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S14",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "14": {
+          "height": "320px",
+          "masId": "sd07S15",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S15",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "2": {
+          "height": "150px",
+          "masId": "sd07S03",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S03",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "3": {
+          "height": "250px",
+          "masId": "sd07S04",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S04",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "4": {
+          "height": "250px",
+          "masId": "sd07S05",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S05",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "5": {
+          "height": "300px",
+          "masId": "sd07S06",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S06",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "6": {
+          "height": "250px",
+          "masId": "sd07S07",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S07",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "7": {
+          "height": "250px",
+          "masId": "sd07S08",
+          "road": "1",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S08",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "8": {
+          "height": "250px",
+          "masId": "sd07S09",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S09",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        },
+        "9": {
+          "height": "250px",
+          "masId": "sd07S10",
+          "road": "0",
+          "vegs": {
+            "0": {
+              "estimate": "",
+              "masId": "sd07S10",
+              "name": "空地",
+              "sowDate": ""
+            }
+          },
+          "width": "100px"
+        }
+      }
+    }
+  }
+}

@@ -76,7 +76,19 @@ $(function(){
 
 		var vegStr ='id=' + horseId +'&'+ 'vegId=' + vegId + '&' + 'vegIndex=' + vegIndex
 		console.log(vegStr)
+
+
 		if(vegIdStr.indexOf('F')>=0){
+
+		var keyNum=0
+	   	 for (var key in allVegsData[horseId]['firstLine'][vegId].vegs){
+	   	 	if(keyNum == vegIndex){
+	   	 	console.log(key)
+	   	 	vegIndex = key
+	   	 	}
+	   	 	keyNum ++ 
+	   	 }
+
 			wilddog.sync().ref(`/${horseId}/firstLine/${vegId}/vegs/${vegIndex}`).update({
 			name:'空地',
 			masId:vegIdStr,
@@ -90,6 +102,15 @@ $(function(){
 	        alert('清空失败')
 	    })
 	}else{
+
+		  	var keyNum=0
+	   	 for (var key in allVegsData[horseId]['secondLine'][vegId].vegs){
+	   	 	if(keyNum == vegIndex){
+	   	 	console.log(key)
+	   	 	vegIndex = key
+	   	 	}
+	   	 	keyNum ++ 
+	   	 }
 
 		wilddog.sync().ref(`/${horseId}/secondLine/${vegId}/vegs/${vegIndex}`).update({
 			name:'空地',
@@ -153,7 +174,7 @@ $('.modelSave').on('click', function(){
 		var vegStr ='id=' + horseId +'&'+ 'vegId=' + vegId + '&' + 'vegIndex=' + vegIndex
 
       if (vegIdStr.indexOf('F')>=0){
-      	console.log(vegId)
+      	
 		wilddog.sync().ref(`/${horseId}/firstLine/${vegId}/vegs`).push({
 			name: editorInfo.name,
 			masId: editorInfo.masId,
@@ -161,7 +182,6 @@ $('.modelSave').on('click', function(){
 			sowDate: editorInfo.sowDate
 		})	
 	    .then(function(newRef){
-	    	console.info(newRef.toString())
 	    	$('#myModal').modal('hide')
 	    })
 	    .catch(function(err){
@@ -175,7 +195,8 @@ $('.modelSave').on('click', function(){
 			sowDate: editorInfo.sowDate
 		})	
 	    .then(function(){
-	    	console.info(newRef.toString())
+	    	
+	    	$('#myModal').modal('hide')
 	    })
 	    .catch(function(err){
 	        alert('添加失败')
@@ -219,6 +240,17 @@ $('.modelSave').on('click', function(){
 	        alert('删除失败')
 	    })
 	   }else{
+
+	   	var keyNum=0
+	   	for (var key in allVegsData[horseId]['secondLine'][vegId].vegs){
+	   		// console.log(key)
+	   	 	if(keyNum == vegIndex){
+	   	 	console.log(key)
+	   	 	vegIndex = key
+	   	 	}
+	   	 	keyNum ++ 
+	   	 }
+	   	 // console.log(vegIndex)
 	    wilddog.sync().ref(`/${horseId}/secondLine/${vegId}/vegs/${vegIndex}`).remove()	
 	    .then(function(){
 	    	alert('删除成功')
