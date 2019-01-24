@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.wilddog.com/sdk/js/2.5.17/wilddog.js"></script>
+	
+	<script type="text/javascript">
+		
+	var editorInfoArr =location.href.split('?')[1].split('&')
+	var editorArr = []
+	var editorObj ={
+
+	}
+	editorInfoArr.forEach(function(item, index){
+		editorArr.push(item.split('=')[1])
+	})
+	console.log(editorObj)
+	
+		var config = {
+		  syncURL: "https://wd7324344485udhfdu.wilddogio.com/histoty" //输入节点 URL
+		}
+		wilddog.initializeApp(config)
+		var ref = wilddog.sync().ref()
+		ref.on("value", function(snapshot) {
+			console.log(snapshot.val())
+
+	
+		})
+			wilddog.sync().ref().push({
+			id : decodeURI(editorArr[0]),
+			name : decodeURI(editorArr[1]),
+			sowDate : decodeURI(editorArr[2]),
+			status: decodeURI(editorArr[3]),
+			note: decodeURI(editorArr[4])
+		})	
+	    .then(function(newRef){
+	    	// $('#myModal').modal('hide')
+	   
+	    	if(location.href.indexOf('editor') == '-1'){
+	    		var proId = editorArr[0].substring(3, 4)
+	    		location.href='./pandect.html?id=' + proId
+	    		return 
+	    	}
+	
+	    	history.back()
+	    })
+	    .catch(function(err){
+	        alert('添加失败')
+	        history.back()
+	    })
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

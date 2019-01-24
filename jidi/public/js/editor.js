@@ -8,6 +8,8 @@ $(function(){
 	var vegIndex = vegStr[2].split( '=' )[1]
 	var editorInfo = null
 	console.log(vegId)
+
+
 	/**
 	*初始化野狗数据库节点
 	**/
@@ -28,8 +30,6 @@ $(function(){
 	   	 vegId = parseInt(vegId.substring(vegId.length-2, vegId.length)) >= 10 ? parseInt(vegId.substring(vegId.length-2, vegId.length))-1 : parseInt(vegId.substring(vegId.length-1, vegId.length))-1
 	   	 var keyNum=0
 	   	 for (var key in snapshot.val()[houseId]['firstLine'][vegId].vegs){
-	   	 	// console.log(snapshot.val()[houseId]['firstLine'][vegId].vegs[key])
-	   	 	// console.log(key)
 	   	 	if(keyNum == vegIndex){
 	   	 	console.log(key)
 	   	 	vegData = snapshot.val()[houseId]['firstLine'][vegId].vegs[key]
@@ -41,8 +41,7 @@ $(function(){
 	 	 vegId = parseInt(vegId.substring(vegId.length-2, vegId.length)) >= 10 ? parseInt(vegId.substring(vegId.length-2, vegId.length))-1 : parseInt(vegId.substring(vegId.length-1, vegId.length))-1  	
 	     var keyNum=0
 	   	 for (var key in snapshot.val()[houseId]['secondLine'][vegId].vegs){
-	   	 	// console.log(snapshot.val()[houseId]['firstLine'][vegId].vegs[key])
-	   	 	// console.log(key)
+
 	   	 	if(keyNum == vegIndex){
 	   	 	console.log(key)
 	   	 	vegData = snapshot.val()[houseId]['secondLine'][vegId].vegs[key]
@@ -50,7 +49,46 @@ $(function(){
 	   	 	keyNum ++ 
 	   	 }
 	     console.log(vegData)
+
+
 	   }
+	var historyBoxTpl = null
+	   // 添加历史记录
+	 	$('.history').on('click', function(){
+	 	historyBoxTpl = {
+			   	masId : vegData.masId,
+			   	name : vegData.name,
+			   	sowDate : vegData.sowDate
+			   }
+			 var hisHtmlStr = template('historyBoxTpl', {
+			 	data : historyBoxTpl
+			 })  
+			 $('#historyBox').html(hisHtmlStr)
+
+			   
+	 	})
+	 	/*
+	 	选择是否添加备注信息
+	 	 */
+	 	$('#historyBox').on('change', '.check', function(){
+	 		$('.check').prop('checked') ? $('.historyInfoBox').show(300) : $('.historyInfoBox').hide(300)
+	 	})
+		
+		$('.saveHistory').on('click', function(){
+			console.log(1)
+			var status = $.trim($('[name="status"]').val())
+			var note = $.trim($('[name="note"]').val())
+			location.href = `./detHistory.html?id=${historyBoxTpl.masId}&name=${vegData.name}
+			&sowDate=${vegData.sowDate}&status=${status}&note=${note}&mark="editor"`
+		})
+
+		/*
+		编辑页面信息发生改变时，禁用添加历史记录按钮
+		 */
+		 $('#vegDetail').on('change', 'input', function(){
+		 	$('.history').addClass('disabled')
+		 })
+
 	   var timeStr = 1000*60*60*24
 	   var dateDis = new Date() - new Date(vegData.sowDate)
 	   vegData.passDay = parseInt(dateDis/timeStr)
@@ -99,19 +137,6 @@ $(function(){
 			sowDate: editorInfo.sowDate
 		})	
 	    .then(function(){
-	    	 var hisBool = confirm('你需要把之前的数据添加到历史记录吗？')
-	    	 if(hisBool){
-	    	 	$.ajax({
-	    	 		url: '../views/ediHistory.html',
-	    	 		type: 'get',
-	    	 		data: originInfo,
-	    	 		success: function(err){
-	    	 			console.log(err)
-	    	 		}
-	    	 	})
-	    	 	
-	    	 	
-	    	 }
 	    	location.href = './pandect.html?id=' + houseId
 	    })
 	    .catch(function(err){

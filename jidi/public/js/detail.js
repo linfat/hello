@@ -1,6 +1,5 @@
 $(function(){
 	var vegStr = location.href.split('?')[1].split('&')
-	// console.log(vegStr)
 	var houseId = vegStr[0].split( '=' )[1]
 	var vegId = vegStr[1].split( '=' )[1]
 	var vegIndex = vegStr[2].split( '=' )[1]
@@ -17,33 +16,24 @@ $(function(){
 	*snapshot 里面的数据会一直和云端保持同步
 	*/
 	ref.on("value", function(snapshot) {
-	    // console.log(snapshot.val())
-	    // vegsData = snapshot.val()[houseId] //获取野狗数据库所选大棚的数据
+	
 	   var vegData = null
 	   var  detailData =null
 	   if (vegId.indexOf('F')>=0){
 	   	 vegId = parseInt(vegId.substring(vegId.length-2, vegId.length)) >= 10 ? parseInt(vegId.substring(vegId.length-2, vegId.length))-1 : parseInt(vegId.substring(vegId.length-1, vegId.length))-1
-	   	 // console.log(snapshot.val())
-	   	 // console.log(houseId)
-	   	 // console.log(vegId)
-	   	 // console.log(vegIndex)
 	   	 var keyNum=0
 	   	 for (var key in snapshot.val()[houseId]['firstLine'][vegId].vegs){
-	   	 	// console.log(snapshot.val()[houseId]['firstLine'][vegId].vegs[key])
-	   	 	// console.log(key)
 	   	 	if(keyNum == vegIndex){
 	   	 	console.log(key)
 	   	 	vegData = snapshot.val()[houseId]['firstLine'][vegId].vegs[key]
 	   	 	}
 	   	 	keyNum ++ 
 	   	 }
-	   	 // vegData = snapshot.val()[houseId]['firstLine'][vegId].vegs[vegIndex]
+
 	   }else{
 	   vegId = parseInt(vegId.substring(vegId.length-2, vegId.length)) >= 10 ? parseInt(vegId.substring(vegId.length-2, vegId.length))-1 : parseInt(vegId.substring(vegId.length-1, vegId.length))-1
 	     var keyNum=0
 	   	 for (var key in snapshot.val()[houseId]['secondLine'][vegId].vegs){
-	   	 	// console.log(snapshot.val()[houseId]['firstLine'][vegId].vegs[key])
-	   	 	// console.log(key)
 	   	 	if(keyNum == vegIndex){
 	   	 	console.log(key)
 	   	 	vegData = snapshot.val()[houseId]['secondLine'][vegId].vegs[key]
@@ -67,7 +57,6 @@ $(function(){
 
 	    $('#vegDetail').html(detailHtmlStr)
 
-	   // console.log(detailHtmlStr)
 	})
 
 	$('#vegDetail').on('click', '#save',  function(){

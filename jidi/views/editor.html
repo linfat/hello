@@ -33,11 +33,23 @@
 		.pro_title{
 			margin-left: 200px;
 			text-shadow: 8px 1px 4px #ccc;
+			display: inline-block;
 		}
 		.hideAlert{
 			display: none;
 			width: 600px;
 			margin-left: 120px;
+		}
+		.check{
+			width: 40px;
+			height: 40px;
+		}
+		.historyInfoBox{
+			display: none;
+		}
+		.pos{
+			margin-left: 20px;
+			margin-top: -10px;
 		}
 	/*	..form-horizontal .control-label{
 			text-align: left;
@@ -90,13 +102,37 @@
 	<!-- 表单 -->
 <div class="main">
 
-<h2 class="pro_title"></h2>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加历史记录</h4>
+      </div>
+      <div class="modal-body">
+		<form class="form-horizontal " id="historyBox">
+
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary saveHistory">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="pro_title"></h2><a data-toggle="modal" data-target="#myModal" class="btn btn-primary history pos">添加历史记录</a>
 
    <div class="alert alert-danger alert-dismissible hideAlert" >
   <button type="button" class="close" ><span aria-hidden="true">&times;</span>
   </button>
   <strong>Warning!</strong> 其中有一项必填项未填写
 </div>
+
 <form class="form-horizontal " id="vegDetail">
  	
   
@@ -142,6 +178,54 @@
 
   </div>
 
+</script>
+
+<!-- history -->
+<script type="text/html" id="historyBoxTpl">
+<div class="form-group " >
+    <label for="productId" class="col-sm-3 control-label">编 号：</label>
+    <div class="col-sm-6">
+      <input value="{{ data.masId }}" name="productId" type="text"  class="form-control" id="productId" placeholder="请输入农作物ID" disabled="">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-3 control-label">农作物：</label>
+    <div class="col-sm-6">
+      <input required="" value="{{ data.name }}" name="name" type="text" class="form-control " id="name" placeholder="请输入农作物名字" disabled="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="plantPro" class="col-sm-3 control-label">种植日期：</label>
+    <div class="col-sm-6">
+      <input required=""  value="{{ data.sowDate }}" name="plantPro" type="text" class="form-control " disabled="" id="plantPro" placeholder="请输入种植日期">
+    </div>
+  </div>
+   <div class="form-group">
+    <label  class="col-sm-3 control-label">非必选项：</label>
+    <div class="col-sm-6">
+      <input  type="checkbox" class="check"><span>是否提交备注信息</span>
+    </div>
+  </div>
+  <div class="historyInfoBox"> 
+   <div class="form-group">
+    <label for="status" class="col-sm-3 control-label">选择状态</label>
+    <div class="col-sm-6">
+     <select name ="status"  class="form-control">
+     	<option value="-1">未知</option>
+     	<option value="1">成功</option>
+     	<option value="0">失败</option>
+     </select>
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="historyInfo" class="col-sm-3 control-label">备注信息</label>
+    <div class="col-sm-6">
+  
+    	<textarea class="form-control" name="note" placeholder="如：这个菜品种的很好，收成很好。"></textarea>
+    </div>
+  </div>
+  </div>
 </script>
 </body>
 </html>

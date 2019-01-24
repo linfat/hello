@@ -6,7 +6,11 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.wilddog.com/sdk/js/2.5.17/wilddog.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../public/js/template-web.js"></script>
+	<script src="../public/js/Chart.bundle.js"></script>
+	<script src="../public/js/history.js"></script>
 	<style type="text/css">
 		.container{
 			width: 100%;
@@ -30,6 +34,29 @@
 		.main{
 			margin-top: 30px;
 			padding: 0px 20px;
+		}
+		.tbCss{
+			width: 50%;
+		}
+		.canvasBox{
+			width: 550px;
+			margin-right: 50px;
+			position: fixed;
+			right: 50px;
+		}
+		.myChart{
+			width: 400px;
+			position: fixed;
+			right: 30px;
+		}
+		.date{
+			z-index: 10;
+			margin-left: 80px;
+		}
+		.shaixuanBtn{
+			border-radius: 50%;
+			margin-left: 20px;
+			margin-top: -5px;
 		}
 	</style>
 </head>
@@ -79,45 +106,49 @@
 		</ul>
 	</div>
 	<div class="main">	
-	<table class="table table-striped table-bordered">
+<div class="canvasBox">
+<div class="timeBox clearfix">
+	<input type="date" class="pull-left date" id="datePre">
+	<input type="date" class="pull-left date" id="dateNext">
+	<button class="btn btn-success shaixuanBtn">篩選</button>
+</div>
+<canvas id="myChart" class="myChart" ></canvas> <!--必须是canvas ,给好Id-->
+</div>
+	<table class="table table-striped table-bordered tbCss" >
 	  <thead>
 	    <tr>
 	      <th>地块编号</th>
 	      <th>农作物</th>
 	      <th>种植时间</th>
-	      <th>成熟时间</th>
-	      <th>经历时长</th>
 	      <th>历史状态</th>
+	      <th>备注</th>
 	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <td>Tanmay</td>
-	      <td>Bangalore</td>
-	      <td>560001</td>
-	      <td>560001</td>
-	      <td>560001</td>
-	      <td>560001</td>
-	    </tr>
-	    <tr>
-	      <td>Sachin</td>
-	      <td>Mumbai</td>
-	      <td>400003</td>
-	      <td>400003</td>
-	      <td>400003</td>
-	      <td>400003</td>
-	    </tr>
-	    <tr>
-	      <td>Uma</td>
-	      <td>Pune</td>
-	      <td>411027</td>
-	      <td>411027</td>
-	      <td>411027</td>
-	      <td>411027</td>
-	    </tr>
+	  </thead >
+	  <tbody id="historyBox"> 
+	    
+	
 	  </tbody>
 	</table>
  </div>
 	</div>
+
+	<script type="text/html" id="historyBoxTpl">
+		{{ each data }}
+		<tr>
+		  <td>{{ $value.id }}</td>
+	      <td>{{ $value.name }}</td>
+	      <td>{{ $value.sowDate }}</td>
+	      {{if $value.status == -1 }}
+	      <td>未知</td>
+	      {{else if $value.status == 0 }}
+		 	<td>成功</td>
+		  {{else if $value.status == 1 }}
+		  	<td>失败</td>
+		  {{/if}}
+		   <td>{{ $value.note == '' ? '未填写' : $value.note   }}</td>	
+	    </tr>
+	   
+	    {{ /each }}
+	</script>
 </body>
 </html>

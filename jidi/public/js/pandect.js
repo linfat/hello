@@ -22,16 +22,9 @@ $(function(){
 	*snapshot 里面的数据会一直和云端保持同步
 	*/
 	ref.on("value", function(snapshot) {
-	    // console.log(snapshot.val())
 	    allVegsData = snapshot.val()
 	    console.log(allVegsData)
 	    renderData(snapshot, horseId)
-
-	    // var roadLineData = snapshot.val()[mapId].roadLine
-	    // var roadHtmlStr = template('roadLineTpl', {
-	    // 	data : roadLineData
-	    // })
-
 	   
 	})
 	/**
@@ -66,72 +59,9 @@ $(function(){
 	 * 清空功能
 	 */
 	$('#hourseInfo').on('click', '.emptyBtn', function(){
+		emptyByOne($(this))
 
-		var vegId = $(this).parent().parent().prev().attr('data-id')
-		var vegIdStr = $(this).attr('data-id')
-		var vegId = parseInt(vegIdStr.substring(vegIdStr.length-2, vegIdStr.length)) >= 10 ? parseInt(vegIdStr.substring(vegIdStr.length-2, vegIdStr.length))-1 : parseInt(vegIdStr.substring(vegIdStr.length-1, vegIdStr.length))-1
-
-		// location.href = location.href + '?id=' + vegId
-		var vegIndex = $(this).attr('data-index')
-
-		var vegStr ='id=' + horseId +'&'+ 'vegId=' + vegId + '&' + 'vegIndex=' + vegIndex
-		console.log(vegStr)
-
-
-		if(vegIdStr.indexOf('F')>=0){
-
-		var keyNum=0
-	   	 for (var key in allVegsData[horseId]['firstLine'][vegId].vegs){
-	   	 	if(keyNum == vegIndex){
-	   	 	console.log(key)
-	   	 	vegIndex = key
-	   	 	}
-	   	 	keyNum ++ 
-	   	 }
-
-			wilddog.sync().ref(`/${horseId}/firstLine/${vegId}/vegs/${vegIndex}`).update({
-			name:'空地',
-			masId:vegIdStr,
-			estimate:'',
-			sowDate:''
-		})	
-	    .then(function(){
-	    	alert('清空成功')
-	    })
-	    .catch(function(err){
-	        alert('清空失败')
-	    })
-	}else{
-
-		  	var keyNum=0
-	   	 for (var key in allVegsData[horseId]['secondLine'][vegId].vegs){
-	   	 	if(keyNum == vegIndex){
-	   	 	console.log(key)
-	   	 	vegIndex = key
-	   	 	}
-	   	 	keyNum ++ 
-	   	 }
-
-		wilddog.sync().ref(`/${horseId}/secondLine/${vegId}/vegs/${vegIndex}`).update({
-			name:'空地',
-			masId:vegIdStr,
-			estimate:'',
-			sowDate:''
-		})	
-	    .then(function(){
-	    	alert('清空成功')
-	    })
-	    .catch(function(err){
-	        alert('清空失败')
-	    })
-
-
-		
-	}
-		
-		// alert(1)
 	})
-
 
 
 /**
@@ -213,13 +143,165 @@ $('.modelSave').on('click', function(){
 	 */
 
 	$('#hourseInfo').on('click', '.delete', function(){
-		var vegIdStr = $(this).attr('data-id')
+		delByOne($(this))
+	})
+
+/**
+ * 清空功能并添加历史记录
+ */
+
+$('#hourseInfo').on('click', '.emptyAndAdd', function(){
+	console.log(1)
+		var itemLen = $(this).parent().parent().children().length
+		var tpmArr = []
+		$(this).parent().parent().children().each(function(index, item){
+			if(index != itemLen-1){
+				tpmArr.push(item.outerText)
+			}
+		})
+		 obj = {
+			masId : tpmArr[0],
+			name: tpmArr[1],
+			sowDate: tpmArr[2]
+		}
+		 var hisHtmlStr = template('historyBoxTpl', {
+			 	data : obj
+			 })  
+			 $('#historyBox').html(hisHtmlStr)
+
+		// 删除功能 
+		emptyByOne($(this), '1')
+	})
+	/**
+	 * 删除功能并添加历史记录
+	 */
+	var obj  = null
+	$('#hourseInfo').on('click', '.deleteAndAdd', function(){
+		var itemLen = $(this).parent().parent().children().length
+		var tpmArr = []
+		$(this).parent().parent().children().each(function(index, item){
+			if(index != itemLen-1){
+				tpmArr.push(item.outerText)
+			}
+		})
+		 obj = {
+			masId : tpmArr[0],
+			name: tpmArr[1],
+			sowDate: tpmArr[2]
+		}
+		 var hisHtmlStr = template('historyBoxTpl', {
+			 	data : obj
+			 })  
+			 $('#historyBox').html(hisHtmlStr)
+
+		// 删除功能 
+		delByOne($(this), '1')
+	})
+
+	/*
+	  删除信息添加到历史记录中
+	 */
+	$('.saveHistory').on('click', function(){
+		pushHis(obj)		
+		})
+/**
+ * pushHis 将信息添加到历史记录列表中
+* @param  {[Object]} obj 传入信息对象
+ */
+function pushHis(obj){
+	var status = $.trim($('[name="status"]').val())
+	var note = $.trim($('[name="note"]').val())
+	var pageId = $('.pageBtn.active').text()
+
+	location.href = `./detHistory.html?id=${obj.masId}&name=${obj.name}
+	&sowDate=${obj.sowDate}&status=${status}&note=${note}`
+	// location.href = location.href+`?id=${pageId}`
+}
+
+/**
+ * emptyOne 
+* @param  {[Object]} $(this) 传入this对象
+* @param  {[Number]} 數字	是否是刪除
+ */
+function emptyByOne(that, status){
+	var vegId = that.parent().parent().prev().attr('data-id')
+		var vegIdStr = that.attr('data-id')
 		var vegId = parseInt(vegIdStr.substring(vegIdStr.length-2, vegIdStr.length)) >= 10 ? parseInt(vegIdStr.substring(vegIdStr.length-2, vegIdStr.length))-1 : parseInt(vegIdStr.substring(vegIdStr.length-1, vegIdStr.length))-1
-		var vegIndex = $(this).attr('data-index')
+
+		// location.href = location.href + '?id=' + vegId
+		var vegIndex = that.attr('data-index')
+
 		var vegStr ='id=' + horseId +'&'+ 'vegId=' + vegId + '&' + 'vegIndex=' + vegIndex
 		console.log(vegStr)
 
 
+		if(vegIdStr.indexOf('F')>=0){
+
+		var keyNum=0
+	   	 for (var key in allVegsData[horseId]['firstLine'][vegId].vegs){
+	   	 	if(keyNum == vegIndex){
+	   	 	console.log(key)
+	   	 	vegIndex = key
+	   	 	}
+	   	 	keyNum ++ 
+	   	 }
+
+			wilddog.sync().ref(`/${horseId}/firstLine/${vegId}/vegs/${vegIndex}`).update({
+			name:'空地',
+			masId:vegIdStr,
+			estimate:'',
+			sowDate:''
+		})	
+	    .then(function(){
+	    	if(status == 1){
+	    		return
+	    	}
+	    	alert('清空成功')
+	    })
+	    .catch(function(err){
+	        alert('清空失败')
+	    })
+	}else{
+
+		  	var keyNum=0
+	   	 for (var key in allVegsData[horseId]['secondLine'][vegId].vegs){
+	   	 	if(keyNum == vegIndex){
+	   	 	console.log(key)
+	   	 	vegIndex = key
+	   	 	}
+	   	 	keyNum ++ 
+	   	 }
+
+		wilddog.sync().ref(`/${horseId}/secondLine/${vegId}/vegs/${vegIndex}`).update({
+			name:'空地',
+			masId:vegIdStr,
+			estimate:'',
+			sowDate:''
+		})	
+	    .then(function(){
+	    	if(status == 1){
+	    		return
+	    	}
+	    	alert('清空成功')
+	    })
+	    .catch(function(err){
+	        alert('清空失败')
+	    })
+
+
+		
+	}
+}
+/**
+ * delByone 删除指定的蔬菜编号
+ * @param  {[Object]} $(this) 传入this对象
+ * @param  {[Number]} 數字	是否是刪除
+ */
+function delByOne(that, status){
+
+		var vegIdStr = that.attr('data-id')
+		var vegId = parseInt(vegIdStr.substring(vegIdStr.length-2, vegIdStr.length)) >= 10 ? parseInt(vegIdStr.substring(vegIdStr.length-2, vegIdStr.length))-1 : parseInt(vegIdStr.substring(vegIdStr.length-1, vegIdStr.length))-1
+		var vegIndex = that.attr('data-index')
 		  if (vegIdStr.indexOf('F')>=0){
 
 		  	var keyNum=0
@@ -233,9 +315,11 @@ $('.modelSave').on('click', function(){
 
 
 
-
 		wilddog.sync().ref(`/${horseId}/firstLine/${vegId}/vegs/${vegIndex}`).remove()	
 	    .then(function(){
+	    	if(status == 1){
+	    		return
+	    	}
 	    	alert('删除成功')
 	    })
 	    .catch(function(err){
@@ -255,15 +339,23 @@ $('.modelSave').on('click', function(){
 	   	 // console.log(vegIndex)
 	    wilddog.sync().ref(`/${horseId}/secondLine/${vegId}/vegs/${vegIndex}`).remove()	
 	    .then(function(){
+	    	if(status == 1){
+	    		return
+	    	}
 	    	alert('删除成功')
 	    })
 	    .catch(function(err){
 	        alert('删除失败')
 	    })
 	   }
-	})
+}
 
-	
+
+
+
+
+
+
 
 })
 
